@@ -45,7 +45,16 @@
                 <section class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</section>
             <![endif]-->
             
-            <section class="flickr"><p>Loading...</section>
+            <section class="flickr">
+                <p>Loading...
+                <div class="row">
+                     <div class="col-xs-6 col-md-3">
+                         <a href="#" class="thumbnail">
+                             <img>
+                         </a>
+                     </div>
+                </div>
+            </section>
             
             <section class="disqus">
                 <div class="container">
@@ -97,8 +106,15 @@
                     tagmode: 'any',
                     format: 'json'
                 }).done(function (data) {
+                    var image = $('.flickr .row > div').clone();
+                                $('.flickr .row').empty();
+                                $('.flickr p').remove();
+                                
                     $.each(data.items, function( i, item ) {
-                        $('<img>').attr('src', item.media.m ).appendTo('.flickr');
+                        image.find('img').attr('src', item.media.m).end().
+                              find('a').attr('href', item.link);
+                              
+                        image.appendTo('.flickr .row');
                         if (i === 4) {
                             return false;
                         }
