@@ -48,7 +48,7 @@
             <section class="flickr">
                 <p>Loading...
                 <div class="row">
-                     <div class="col-xs-6 col-md-3">
+                     <div class="col-xs-6 col-md-3 hide">
                          <a href="#" class="thumbnail">
                              <img>
                          </a>
@@ -109,6 +109,8 @@
                     var image = $('.flickr .row > div').clone();
                                 $('.flickr .row').empty();
                                 $('.flickr p').remove();
+                                
+                                image.removeClass('hide');
                                 
                     $.each(data.items, function( i, item ) {
                         var thumb = image.clone();
