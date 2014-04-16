@@ -5,30 +5,28 @@
     <link rel="stylesheet" href="stylesheets/stylesheet.css">
     <style>
         body {
-             background: url(https://cloud.githubusercontent.com/assets/3275424/2722344/0805d1bc-c587-11e3-8960-2462b55431fd.png) repeat;
+            text-align: center;
             font-family: 'Open Sans';
         }
         
+        .section, 
+         section, 
+            main {
+             border-bottom: 1px solid #eee;
+               padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        
         header {
-               background: none !important;
-                    color: #fff !important;
-            margin-bottom: 0px !important;
-               text-align: center;
+            background: url(https://cloud.githubusercontent.com/assets/3275424/2722344/0805d1bc-c587-11e3-8960-2462b55431fd.png) repeat;
+                 color: #fff !important;
         }
         
         header h1 {font-weight: 300;}
-        .social-buttons {
-            border-radius: 0px !important;
-               text-align: center;
-              margin-left: -15px;
-             margin-right: -15px;
-        }
         
         .social-buttons .twitter-share {width: 55px; height: 65px;}
         .social-buttons .googleplus-one,
         .social-buttons .facebook-like {width: 50px; height: 65px;}
-        
-        main {background: #fff;}
     </style>
     <title>Goodmind | Index</title>
         <header class="jumbotron">
@@ -38,9 +36,12 @@
             </div>
         </header>
         
-        <main class="container">
-            <section class="social-buttons jumbotron">
-                <ul class="list-inline">
+        <main>
+            <p>Hello to everyone! ;)
+        </main>
+        
+        <footer class="social-buttons">
+            <ul class="list-inline">
                     <li>
                         <a href="http://twitter.com/share" class="socialite twitter-share" data-text="Goodmind | Index" data-url="http://goodmind.github.io" data-count="vertical" rel="nofollow" target="_blank">
                             <span class="vhidden">Share on Twitter</span>
@@ -53,11 +54,8 @@
                         <a href="http://www.facebook.com/sharer.php?u=http://www.goodmind.github.io&t=Goodmind%20|%20Index" class="socialite facebook-like" data-href="http://goodmind.github.io" data-send="false" data-layout="box_count" data-width="60" data-show-faces="false" rel="nofollow" target="_blank">
                             <span class="vhidden">Share on Facebook</span>
                         </a>
-                </ul>
-            </section>
-            
-            <p>Hello to everyone! ;)
-        </main>
-        
+           </ul>
+        </footer>
+       
         <script src="javascripts/vendor/socialite.min.js"></script>
         <script>Socialite.load();</script>
