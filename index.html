@@ -111,10 +111,11 @@
                                 $('.flickr p').remove();
                                 
                     $.each(data.items, function( i, item ) {
-                        image.find('img').attr('src', item.media.m).end().
-                              find('a').attr('href', item.link);
+                        var thumb = image.clone();
+                            thumb.find('img').attr('src', item.media.m).end().
+                                  find('a').attr('href', item.link);
                               
-                        image.appendTo('.flickr .row');
+                        thumb.appendTo('.flickr .row');
                         if (i === 4) {
                             return false;
                         }
