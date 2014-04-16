@@ -29,6 +29,10 @@
         .social-buttons .facebook-like {width: 50px; height: 65px;}
     </style>
     <title>Goodmind | Index</title>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
         <header class="jumbotron">
             <div class="container">
                 <h1>Goodmind</h1>
@@ -37,7 +41,11 @@
         </header>
         
         <main>
-            <section><p>Hello to everyone! ;)</section>
+            <!--[if lt IE 8]>
+                <section class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</section>
+            <![endif]-->
+            
+            <section class="flickr"><p>Loading...</section>
             
             <section class="disqus">
                 <div class="container">
@@ -67,6 +75,7 @@
            <strong>2014</strong> &copy; Goodmind
         </footer>
        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="javascripts/vendor/socialite.min.js"></script>
         <script>Socialite.load();</script>
         <script>
@@ -74,9 +83,26 @@
             var disqus_shortname = 'goodmind'; // required: replace example with your forum shortname
     
             /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function() {
+            (function () {
                 var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
                 dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
                 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            
+            (function () {
+                var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+                
+                $.getJSON(flickerAPI, {
+                    tags: 'mount rainier',
+                    tagmode: 'any',
+                    format: 'json'
+                }).done(function (data) {
+                    $.each(data.items, function( i, item ) {
+                        $('<img>').attr('src', item.media.m ).appendTo('.flickr');
+                        if (i === 4) {
+                            return false;
+                        }
+                    });
+                });
             })();
         </script>
