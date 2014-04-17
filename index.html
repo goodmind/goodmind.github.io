@@ -9,12 +9,22 @@
             font-family: 'Open Sans';
         }
         
+        .btn-outline {
+            text-transform: uppercase;
+               font-weight: 600;
+                background: none;
+                    border: 2px solid #fff;
+        }
+        
         .section, 
          section {
+            padding-bottom: 40px;
              border-bottom: 1px solid #eee;
                padding-top: 40px;
-            padding-bottom: 40px;
         }
+        
+        .email,
+        .disqus {border-bottom: none;}
         
         .flickr img {width: 100%;}
         .email {
@@ -23,9 +33,9 @@
         }
         
         header {
+            margin-bottom: 0px !important;
                background: url(https://cloud.githubusercontent.com/assets/3275424/2722344/0805d1bc-c587-11e3-8960-2462b55431fd.png) repeat;
                     color: #fff !important;
-            margin-bottom: 0px !important;
         }
         
         header h1 {font-weight: 300;}
@@ -95,7 +105,7 @@
                     </div>
                     
                     <div class="form-group text-center">
-                        <button type="submit" class="btn btn-default">SEND EMAIL</button>
+                        <button type="submit" class="btn btn-default btn-outline">SEND EMAIL</button>
                     </div>
                 </form>
             </section>
