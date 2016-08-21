@@ -14,7 +14,7 @@ body {
 }
 
 #molto-pazzo {
-    bottom: -350px;
+    bottom: -30vh;
     right: 0;
     will-change: bottom;
     transition: bottom 1s;
@@ -34,7 +34,7 @@ body {
 
 
 #molto-pazzo1 {
-    left: -350px;
+    left: -30vw;
     top: 0;
     will-change: left;
     transition: left 1s;
@@ -46,7 +46,7 @@ body {
 }
 
 #molto-pazzo2 {
-    top: -350px;
+    top: -30vh;
     left: 150px;
     will-change: top;
     transition: top 1s;
