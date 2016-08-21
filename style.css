@@ -2,3 +2,24 @@ body {
   text-align: center;
   font: 1em sans-serif;
 }
+
+#molto-pazzo {
+    text-align: center;
+    position: fixed;
+    bottom: -350px;
+    right: 0;
+    will-change: bottom;
+    transition: bottom 1s;
+}
+
+#molto-pazzo:hover {
+  bottom: 0;
+}
+
+#molto-pazzo div {
+  display: none;
+}
+
+#molto-pazzo:hover div {
+  display: block;
+}
