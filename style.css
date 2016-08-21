@@ -3,10 +3,17 @@ body {
   font: 1em sans-serif;
 }
 
+#molto-pazzo, #molto-pazzo1, #molto-pazzo2 {
+  width: 10vw;
+  text-align: center;
+  position: fixed;
+}
+
+#molto-pazzo img, #molto-pazzo1 img, #molto-pazzo2 img {
+  width: 100%;
+}
+
 #molto-pazzo {
-    width: 10vw;
-    text-align: center;
-    position: fixed;
     bottom: -350px;
     right: 0;
     will-change: bottom;
@@ -27,9 +34,6 @@ body {
 
 
 #molto-pazzo1 {
-    width: 10vw;
-    text-align: center;
-    position: fixed;
     left: -350px;
     top: 0;
     will-change: left;
@@ -42,9 +46,6 @@ body {
 }
 
 #molto-pazzo2 {
-    width: 10vw;
-    text-align: center;
-    position: fixed;
     top: -350px;
     left: 150px;
     will-change: top;
