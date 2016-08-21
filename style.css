@@ -34,7 +34,7 @@ body {
 
 
 #molto-pazzo1 {
-    left: -30vw;
+    left: -20vw;
     top: 0;
     will-change: left;
     transition: left 1s;
