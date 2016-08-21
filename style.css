@@ -4,6 +4,7 @@ body {
 }
 
 #molto-pazzo {
+    width: 10vw;
     text-align: center;
     position: fixed;
     bottom: -350px;
@@ -26,6 +27,7 @@ body {
 
 
 #molto-pazzo1 {
+    width: 10vw;
     text-align: center;
     position: fixed;
     left: -350px;
@@ -40,6 +42,7 @@ body {
 }
 
 #molto-pazzo2 {
+    width: 10vw;
     text-align: center;
     position: fixed;
     top: -350px;
