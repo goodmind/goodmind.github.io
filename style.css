@@ -38,3 +38,17 @@ body {
 #molto-pazzo1:hover {
   left: 0;
 }
+
+#molto-pazzo2 {
+    text-align: center;
+    position: fixed;
+    top: -350px;
+    left: 150px;
+    will-change: top;
+    transition: top 1s;
+    transform: rotate(360deg);
+}
+
+#molto-pazzo2:hover {
+  top: 0;
+}
