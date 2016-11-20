@@ -2,3 +2,15 @@ body {
   text-align: center;
   font: 1em sans-serif;
 }
+
+.shurotshka {
+  display: inline-block
+}
+
+header {
+  text-align: right
+}
+
+main {
+  text-align: left
+}
